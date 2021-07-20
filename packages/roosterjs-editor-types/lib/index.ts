@@ -5,6 +5,7 @@ export { DocumentPosition } from './browser/DocumentPosition';
 export { default as EdgeLinkPreview } from './browser/EdgeLinkPreview';
 export { Keys } from './browser/Keys';
 export { NodeType } from './browser/NodeType';
+export { ContentTypePrefix, ContentType } from './browser/ContentType';
 
 // Enum
 export { Alignment } from './enum/Alignment';
@@ -25,13 +26,15 @@ export { PositionType } from './enum/PositionType';
 export { QueryScope } from './enum/QueryScope';
 export { RegionType } from './enum/RegionType';
 export { TableOperation } from './enum/TableOperation';
-
+export { ImageEditOperation } from './enum/ImageEditOperation';
+export { ClearFormatMode } from './enum/ClearFormatMode';
 // Event
 export { default as BeforeCutCopyEvent } from './event/BeforeCutCopyEvent';
 export { default as BasePluginEvent } from './event/BasePluginEvent';
 export { default as BeforeDisposeEvent } from './event/BeforeDisposeEvent';
 export { default as BeforePasteEvent } from './event/BeforePasteEvent';
 export { default as ContentChangedEvent } from './event/ContentChangedEvent';
+export { default as EditImageEvent } from './event/EditImageEvent';
 export { default as EditorReadyEvent } from './event/EditorReadyEvent';
 export { default as EntityOperationEvent } from './event/EntityOperationEvent';
 export { default as ExtractContentWithDomEvent } from './event/ExtractContentWithDomEvent';
@@ -75,7 +78,11 @@ export {
     StyleBasedFormatState,
     EditorUndoState,
 } from './interface/FormatState';
-export { default as ExtractClipboardEventOption } from './interface/ExtractClipboardEventOption';
+export {
+    default as ExtractClipboardEventOption,
+    ExtractClipboardItemsOption,
+    ExtractClipboardItemsForIEOptions,
+} from './interface/ExtractClipboardEventOption';
 export { default as IContentTraverser } from './interface/IContentTraverser';
 export { default as InlineElement } from './interface/InlineElement';
 export {
@@ -152,6 +159,7 @@ export { default as UndoSnapshotsService } from './interface/UndoSnapshotsServic
 export { default as PickerDataProvider } from './interface/PickerDataProvider';
 export { default as PickerPluginOptions } from './interface/PickerPluginOptions';
 export { default as VCell } from './interface/VCell';
+export { default as ImageEditOptions } from './interface/ImageEditOptions';
 
 // Core Plugin State
 export { default as DOMEventPluginState } from './corePluginState/DOMEventPluginState';

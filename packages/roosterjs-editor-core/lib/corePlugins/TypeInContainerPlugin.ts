@@ -1,5 +1,11 @@
-import { EditorPlugin, IEditor, PluginEvent, PluginEventType } from 'roosterjs-editor-types';
 import { findClosestElementAncestor, Position } from 'roosterjs-editor-dom';
+import {
+    EditorPlugin,
+    ExperimentalFeatures,
+    IEditor,
+    PluginEvent,
+    PluginEventType,
+} from 'roosterjs-editor-types';
 
 /**
  * @internal
@@ -37,15 +43,27 @@ export default class TypeInContainerPlugin implements EditorPlugin {
     onPluginEvent(event: PluginEvent) {
         if (event.eventType == PluginEventType.KeyPress) {
             // If normalization was not possible before the keypress,
-            // check again after the keyboard event has been processed by browser native behaviour.
+            // check again after the keyboard event has been processed by browser native behavior.
             //
             // This handles the case where the keyboard event that first inserts content happens when
             // there is already content under the selection (e.g. Ctrl+a -> type new content).
             //
-            // Only scheudle when the range is not collapsed to catch this edge case.
+            // Only schedule when the range is not collapsed to catch this edge case.
             let range = this.editor.getSelectionRange();
+            let shouldAlwaysApplyDefaultFormat = this.editor.isFeatureEnabled(
+                ExperimentalFeatures.AlwaysApplyDefaultFormat
+            );
 
-            if (!range || this.editor.contains(findClosestElementAncestor(range.startContainer))) {
+            if (
+                !range ||
+                this.editor.contains(
+                    findClosestElementAncestor(
+                        range.startContainer,
+                        null /* root */,
+                        shouldAlwaysApplyDefaultFormat ? '[style]' : null /*selector*/
+                    )
+                )
+            ) {
                 return;
             }
 

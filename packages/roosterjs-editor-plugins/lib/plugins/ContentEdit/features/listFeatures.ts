@@ -13,6 +13,8 @@ import {
     Position,
     VListChain,
     createVListFromRegion,
+    isBlockElement,
+    cacheGetEventData,
 } from 'roosterjs-editor-dom';
 import {
     BuildInEditFeature,
@@ -20,9 +22,7 @@ import {
     Indentation,
     ListFeatureSettings,
     Keys,
-    NodeType,
     PluginKeyboardEvent,
-    PositionType,
     QueryScope,
     RegionBase,
 } from 'roosterjs-editor-types';
@@ -94,6 +94,28 @@ const OutdentWhenBackOn1stEmptyLine: BuildInEditFeature<PluginKeyboardEvent> = {
 };
 
 /**
+ * MaintainListChainWhenDelete edit feature, provides the ability to indent the list if user press
+ * DELETE before the first item of a list
+ */
+const MaintainListChainWhenDelete: BuildInEditFeature<PluginKeyboardEvent> = {
+    keys: [Keys.DELETE],
+    shouldHandleEvent: (event, editor) => {
+        const li = editor.getElementAtCursor('LI', null /*startFrom*/, event);
+        if (li) {
+            return false;
+        }
+        const isAtEnd = Position.getEnd(editor.getSelectionRange()).isAtEnd;
+        const nextSibiling = isAtEnd ? getCacheNextSibiling(event, editor) : null;
+        const isAtEndAndBeforeLI = editor.getElementAtCursor('LI', nextSibiling, event);
+        return isAtEndAndBeforeLI;
+    },
+    handleEvent: (event, editor) => {
+        const chains = getListChains(editor);
+        editor.runAsync(editor => experimentCommitListChains(editor, chains));
+    },
+};
+
+/**
  * OutdentWhenEnterOnEmptyLine edit feature, provides the ability to outdent current item if user press
  * ENTER at the beginning of an empty line of a list
  */
@@ -114,7 +136,7 @@ const OutdentWhenEnterOnEmptyLine: BuildInEditFeature<PluginKeyboardEvent> = {
 };
 
 /**
- * AutoBullet edit feature, provides the ablility to automatically convert current line into a list.
+ * AutoBullet edit feature, provides the ability to automatically convert current line into a list.
  * When user input "1. ", convert into a numbering list
  * When user input "- " or "* ", convert into a bullet list
  */
@@ -126,12 +148,9 @@ const AutoBullet: BuildInEditFeature<PluginKeyboardEvent> = {
             let textBeforeCursor = searcher.getSubStringBefore(4);
 
             // Auto list is triggered if:
-            // 1. Text before cursor exactly mathces '*', '-' or '1.'
+            // 1. Text before cursor exactly matches '*', '-' or '1.'
             // 2. There's no non-text inline entities before cursor
-            return (
-                /^(\*|-|[0-9]{1,2}\.)$/.test(textBeforeCursor) &&
-                !searcher.getNearestNonTextInlineElement()
-            );
+            return isAListPattern(textBeforeCursor) && !searcher.getNearestNonTextInlineElement();
         }
         return false;
     },
@@ -156,7 +175,7 @@ const AutoBullet: BuildInEditFeature<PluginKeyboardEvent> = {
                 ) {
                     prepareAutoBullet(editor, rangeToDelete);
                     toggleBullet(editor);
-                } else if (textBeforeCursor.indexOf('1.') == 0) {
+                } else if (isAListPattern(textBeforeCursor)) {
                     prepareAutoBullet(editor, rangeToDelete);
                     toggleNumbering(editor);
                 } else if ((regions = editor.getSelectedRegions()) && regions.length == 1) {
@@ -188,17 +207,44 @@ const MaintainListChain: BuildInEditFeature<PluginKeyboardEvent> = {
     },
 };
 
+/**
+ * Validate if a block of text is considered a list pattern
+ * The regex expression will look for patterns of the form:
+ * 1.  1>  1)  1-  (1)
+ * @returns if a text is considered a list pattern
+ */
+function isAListPattern(textBeforeCursor: string) {
+    const REGEX: RegExp = /^(\*|-|[0-9]{1,2}\.|[0-9]{1,2}\>|[0-9]{1,2}\)|[0-9]{1,2}\-|\([0-9]{1,2}\))$/;
+    return REGEX.test(textBeforeCursor);
+}
+
 function getListChains(editor: IEditor) {
     return VListChain.createListChains(editor.getSelectedRegions());
 }
 
+function getCacheNextSibiling(event: PluginKeyboardEvent, editor: IEditor): Node | undefined {
+    const element = cacheGetEventData(event, 'nextSibiling', () => {
+        const range = editor.getSelectionRange();
+        const pos = Position.getEnd(range).normalize();
+        const traverser = editor.getBodyTraverser(pos.node);
+        return traverser?.getNextBlockElement()?.getStartNode();
+    });
+    return element;
+}
+
 function prepareAutoBullet(editor: IEditor, range: Range) {
     range.deleteContents();
-    const node = range.startContainer;
-    if (node?.nodeType == NodeType.Text && node.nodeValue == '' && !node.nextSibling) {
+
+    const block = editor.getBlockElementAtNode(range.startContainer);
+    const endNode = block?.getEndNode();
+    if (endNode && getTagOfNode(endNode) != 'BR' && block?.getTextContent().trim() === '') {
         const br = editor.getDocument().createElement('BR');
-        editor.insertNode(br);
-        editor.select(br, PositionType.Before);
+        if (isBlockElement(endNode)) {
+            endNode.appendChild(br);
+        } else {
+            endNode.parentNode.insertBefore(br, endNode.nextSibling);
+        }
+        editor.select(range.startContainer, range.startOffset);
     }
 }
 
@@ -237,4 +283,5 @@ export const ListFeatures: Record<
     outdentWhenEnterOnEmptyLine: OutdentWhenEnterOnEmptyLine,
     mergeInNewLineWhenBackspaceOnFirstChar: MergeInNewLine,
     maintainListChain: MaintainListChain,
+    maintainListChainWhenDelete: MaintainListChainWhenDelete,
 };

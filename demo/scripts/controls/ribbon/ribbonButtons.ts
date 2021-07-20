@@ -3,13 +3,12 @@ import MainPaneBase from '../MainPaneBase';
 import renderInsertLinkDialog from './renderInsertLinkDialog';
 import renderTableOptions from './renderTableOptions';
 import RibbonButtonType from './RibbonButtonType';
-import { Alignment, Direction, Indentation } from 'roosterjs-editor-types';
+import { Alignment, ClearFormatMode, Direction, Indentation } from 'roosterjs-editor-types';
 import { Browser } from 'roosterjs-editor-dom';
+import { getDarkColor } from 'roosterjs-color-utils';
 import {
-    setBackgroundColor,
     setFontName,
     setFontSize,
-    setTextColor,
     toggleBold,
     toggleItalic,
     toggleUnderline,
@@ -24,11 +23,12 @@ import {
     toggleSubscript,
     toggleStrikethrough,
     setDirection,
-    clearBlockFormat,
     clearFormat,
     toggleHeader,
     toggleCodeBlock,
     insertImage,
+    setTextColor,
+    setBackgroundColor,
 } from 'roosterjs-editor-api';
 
 const buttons: { [key: string]: RibbonButtonType } = {
@@ -79,34 +79,70 @@ const buttons: { [key: string]: RibbonButtonType } = {
     textColor: {
         title: 'Text color',
         image: require('../svg/textcolor.svg'),
-        onClick: setTextColor,
+        onClick: (editor, color) =>
+            setTextColor(editor, {
+                lightModeColor: color,
+                darkModeColor: getDarkColor(color),
+            }),
         dropDownItems: {
-            '#757b80': 'Gray',
-            '#bd1398': 'Violet',
-            '#7232ad': 'Purple',
-            '#006fc9': 'Blue',
-            '#4ba524': 'Green',
-            '#e2c501': 'Yellow',
-            '#d05c12': 'Orange',
-            '#ff0000': 'Red',
+            '#51a7f9': 'Light Blue',
+            '#6fc040': 'Light Green',
+            '#f5d427': 'Light Yellow',
+            '#f3901d': 'Light Orange',
+            '#ed5c57': 'Light Red',
+            '#b36ae2': 'Light Purple',
+            '#0c64c0': 'Blue',
+            '#0c882a': 'Green',
+            '#dcbe22': 'Yellow',
+            '#de6a19': 'Orange',
+            '#c82613': 'Red',
+            '#763e9b': 'Purple',
+            '#174e86': 'Dark Blue',
+            '#0f5c1a': 'Dark Green',
+            '#c3971d': 'Dark Yellow',
+            '#be5b17': 'Dark Orange',
+            '#861106': 'Dark Red',
+            '#5e327c': 'Dark Purple',
+            '#002451': 'Darker Blue',
+            '#06400c': 'Darker Green',
+            '#a37519': 'Darker Yellow',
+            '#934511': 'Darker Orange',
+            '#570606': 'Darker Red',
+            '#3b204d': 'Darker Purple',
             '#ffffff': 'White',
+            '#cccccc': 'Light Gray',
+            '#999999': 'Gray',
+            '#666666': 'Dark Gray',
+            '#333333': 'Darker Gray',
             '#000000': 'Black',
         },
     },
     backColor: {
         title: 'Highlight',
         image: require('../svg/backcolor.svg'),
-        onClick: setBackgroundColor,
+        onClick: (editor, color) =>
+            setBackgroundColor(editor, {
+                lightModeColor: color,
+                darkModeColor: getDarkColor(color),
+            }),
         dropDownItems: {
-            '#ffff00': 'Yellow',
-            '#00ff00': 'Green',
             '#00ffff': 'Cyan',
-            '#ff00ff': 'Purple',
-            '#0000ff': 'Blue',
+            '#00ff00': 'Green',
+            '#ffff00': 'Yellow',
+            '#ff8000': 'Orange',
             '#ff0000': 'Red',
-            '#bebebe': 'Gray',
-            '#666666': 'Dark Gray',
+            '#ff00ff': 'Magenta',
+            '#80ffff': 'Light Cyan',
+            '#80ff80': 'Light Green',
+            '#ffff80': 'Light Yellow',
+            '#ffc080': 'Light Orange',
+            '#ff8080': 'Light Red',
+            '#ff80ff': 'Light Magenta',
             '#ffffff': 'White',
+            '#cccccc': 'Light Gray',
+            '#999999': 'Gray',
+            '#666666': 'Dark Gray',
+            '#333333': 'Darker Gray',
             '#000000': 'Black',
         },
     },
@@ -265,11 +301,29 @@ const buttons: { [key: string]: RibbonButtonType } = {
     clearFormat: {
         title: 'Remove formatting',
         image: require('../svg/removeformat.svg'),
-        onClick: (editor, key) => (key == 'block' ? clearBlockFormat(editor) : clearFormat(editor)),
+        onClick: (editor, key) => {
+            const handlers: Record<string, ClearFormatMode> = {
+                autodetect: ClearFormatMode.AutoDetect,
+                block: ClearFormatMode.Block,
+                selection: ClearFormatMode.Inline,
+            };
+            clearFormat(editor, handlers[key]);
+        },
         dropDownItems: {
+            autodetect: 'Remove format (Autodetect)',
             selection: 'Remove formatting of selected text',
             block: 'Remove formatting of selected paragraphs',
         },
+    },
+    dark: {
+        title: 'Dark Mode',
+        image: require('../svg/moon.svg'),
+        onClick: editor => {
+            const isDark = !editor.isDarkMode();
+            editor.setDarkModeState(isDark);
+        },
+        checked: (format, editor) => editor.isDarkMode(),
+        isHidden: () => !MainPaneBase.getInstance().isDarkModeSupported(),
     },
     paste: {
         title: 'Paste Again',

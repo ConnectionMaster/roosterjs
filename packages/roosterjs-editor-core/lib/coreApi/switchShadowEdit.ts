@@ -11,16 +11,15 @@ export const switchShadowEdit: SwitchShadowEdit = (core: EditorCore, isOn: boole
 
     if (isOn) {
         if (!wasInShadowEdit) {
-            // Merge sibling text nodes to avoid inaccuracy of text node offset
-            contentDiv.normalize();
-
             const range = core.api.getSelectionRange(core, true /*tryGetFromCache*/);
             shadowEditSelectionPath = range && getSelectionPath(contentDiv, range);
             shadowEditFragment = core.contentDiv.ownerDocument.createDocumentFragment();
+
             while (contentDiv.firstChild) {
                 shadowEditFragment.appendChild(contentDiv.firstChild);
             }
 
+            shadowEditFragment.normalize();
             core.api.triggerEvent(
                 core,
                 {

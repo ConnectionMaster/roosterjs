@@ -11,7 +11,7 @@ const initialState: BuildInPluginState = {
         hyperlink: true,
         paste: true,
         watermark: false,
-        imageResize: true,
+        imageEdit: true,
         cutPasteListChain: true,
         tableResize: true,
         customReplace: true,
@@ -24,9 +24,13 @@ const initialState: BuildInPluginState = {
     watermarkText: 'Type content here ...',
     forcePreserveRatio: false,
     showRibbon: true,
+    supportDarkMode: true,
     experimentalFeatures: [
         ExperimentalFeatures.PasteWithLinkPreview,
         ExperimentalFeatures.SingleDirectionResize,
+        ExperimentalFeatures.ImageRotate,
+        ExperimentalFeatures.ImageCrop,
+        ExperimentalFeatures.AlwaysApplyDefaultFormat,
     ],
 };
 

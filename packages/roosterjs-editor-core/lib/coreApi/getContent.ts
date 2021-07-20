@@ -26,13 +26,15 @@ export const getContent: GetContent = (core: EditorCore, mode: GetContentMode): 
     const includeSelectionMarker = mode == GetContentMode.RawHTMLWithSelection;
 
     // When there is fragment for shadow edit, always use the cached fragment as document since HTML node in editor
-    // has been changed by uncommited shadow edit which should be ignored.
+    // has been changed by uncommitted shadow edit which should be ignored.
     const root = core.lifecycle.shadowEditFragment || core.contentDiv;
 
     if (mode == GetContentMode.PlainText) {
         content = getTextContent(root);
     } else if (triggerExtractContentEvent || core.lifecycle.isDarkMode) {
         const clonedRoot = cloneNode(root);
+        clonedRoot.normalize();
+
         const originalRange = core.api.getSelectionRange(core, true /*tryGetFromCache*/);
         const path = !includeSelectionMarker
             ? null
