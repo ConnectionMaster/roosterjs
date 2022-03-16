@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line high'></div>
     <pre><table class="coverage">
@@ -320,7 +326,11 @@
 <a name='L261'></a><a href='#L261'>261</a>
 <a name='L262'></a><a href='#L262'>262</a>
 <a name='L263'></a><a href='#L263'>263</a>
-<a name='L264'></a><a href='#L264'>264</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -514,23 +524,23 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-yes">163x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">10100x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">10923x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -538,17 +548,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -558,17 +570,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-yes">163x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
-<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
+<span class="cline-any cline-yes">163x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -581,12 +595,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10100x</span>
+<span class="cline-any cline-yes">10923x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { cloneObject } from './cloneObject';
 import { CssStyleCallbackMap, StringMap } from 'roosterjs-editor-types';
 &nbsp;
-const HTML_TAG_REPLACEMENT: Record&lt;string, string&gt; = {
+const HTML_TAG_REPLACEMENT: Record&lt;string, string | null&gt; = {
     // Allowed tags
     a: '*',
     abbr: '*',
@@ -722,7 +736,7 @@ const ALLOWED_HTML_ATTRIBUTES = (
     'coords,datetime,default,dir,dirname,disabled,download,face,headers,height,hidden,high,href,' +
     'hreflang,ismap,kind,label,lang,list,low,max,maxlength,media,min,multiple,open,optimum,pattern,' +
     'placeholder,readonly,rel,required,reversed,rows,rowspan,scope,selected,shape,size,sizes,span,' +
-    'spellcheck,src,srclang,srcset,start,step,style,tabindex,target,title,translate,type,usemap,value,' +
+    'spellcheck,src,srclang,srcset,start,step,style,tabindex,target,title,translate,type,usemap,valign,value,' +
     'width,wrap'
 ).split(',');
 &nbsp;
@@ -775,8 +789,8 @@ const ALLOWED_CSS_CLASSES: string[] = [];
  * @internal
  */
 export function getTagReplacement(
-    additionalReplacements: Record&lt;string, string&gt;
-): Record&lt;string, string&gt; {
+    additionalReplacements: Record&lt;string, string&gt; | undefined
+): Record&lt;string, string | null&gt; {
     const result = { ...HTML_TAG_REPLACEMENT };
     const replacements = additionalReplacements || {};
     Object.keys(replacements).forEach(key =&gt; {
@@ -791,7 +805,7 @@ export function getTagReplacement(
 /**
  * @internal
  */
-export function getAllowedAttributes(additionalAttributes: string[]): string[] {
+export function getAllowedAttributes(additionalAttributes: string[] | undefined): string[] {
     return unique(ALLOWED_HTML_ATTRIBUTES.concat(additionalAttributes || [])).map(attr =&gt;
         attr.toLocaleLowerCase()
     );
@@ -800,7 +814,9 @@ export function getAllowedAttributes(additionalAttributes: string[]): string[] {
 /**
  * @internal
  */
-export function getAllowedCssClassesRegex(additionalCssClasses: string[]): RegExp {
+export function getAllowedCssClassesRegex(
+    additionalCssClasses: string[] | undefined
+): RegExp | null {
     const patterns = ALLOWED_CSS_CLASSES.concat(additionalCssClasses || []);
     return patterns.length &gt; 0 ? <span class="branch-0 cbranch-no" title="branch not covered" >new RegExp(patterns.join('|')) </span>: null;
 }
@@ -808,7 +824,7 @@ export function getAllowedCssClassesRegex(additionalCssClasses: string[]): RegEx
 /**
  * @internal
  */
-export function getDefaultStyleValues(additionalDefaultStyles: StringMap): StringMap {
+export function getDefaultStyleValues(additionalDefaultStyles: StringMap | undefined): StringMap {
     let result = cloneObject(DEFAULT_STYLE_VALUES);
     if (additionalDefaultStyles) {
         Object.keys(additionalDefaultStyles).forEach(name =&gt; {
@@ -827,7 +843,9 @@ export function getDefaultStyleValues(additionalDefaultStyles: StringMap): Strin
 /**
  * @internal
  */
-export function getStyleCallbacks(callbacks: CssStyleCallbackMap): CssStyleCallbackMap {
+export function getStyleCallbacks(
+    callbacks: CssStyleCallbackMap | null | undefined
+): CssStyleCallbackMap {
     let result = cloneObject(callbacks);
     result.position = result.position || removeValue;
     result.width = result.width || removeWidthForLiAndDiv;
@@ -852,10 +870,9 @@ function unique&lt;T&gt;(array: T[]): T[] {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Feb 03 2021 21:15:16 GMT+0000 (Coordinated Universal Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Wed Mar 16 2022 19:10:31 GMT+0000 (Coordinated Universal Time)
             </div>
-        </div>
         <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {

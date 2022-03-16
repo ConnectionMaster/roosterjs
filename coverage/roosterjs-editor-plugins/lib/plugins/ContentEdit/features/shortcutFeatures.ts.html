@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/20</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>12/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.11% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">31.58% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/19</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
@@ -54,8 +54,14 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -198,19 +204,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -231,28 +237,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">63x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -302,19 +308,19 @@ const commands: ShortcutCommand[] = [
     createCommand(Keys.Ctrl | Keys.B, Keys.Meta | Keys.B, toggleBold),
     createCommand(Keys.Ctrl | Keys.I, Keys.Meta | Keys.I, toggleItalic),
     createCommand(Keys.Ctrl | Keys.U, Keys.Meta | Keys.U, toggleUnderline),
-    createCommand(Keys.Ctrl | Keys.Z, Keys.Meta | Keys.Z, <span class="fstat-no" title="function not covered" >editor </span>=&gt; <span class="cstat-no" title="statement not covered" >editor.undo()),</span>
-    createCommand(Keys.Ctrl | Keys.Y, Keys.Meta | Keys.Shift | Keys.Z, <span class="fstat-no" title="function not covered" >editor </span>=&gt; <span class="cstat-no" title="statement not covered" >editor.redo()),</span>
+    createCommand(Keys.Ctrl | Keys.Z, Keys.Meta | Keys.Z, editor =&gt; editor.undo()),
+    createCommand(Keys.Ctrl | Keys.Y, Keys.Meta | Keys.Shift | Keys.Z, editor =&gt; editor.redo()),
     createCommand(Keys.Ctrl | Keys.PERIOD, Keys.Meta | Keys.PERIOD, toggleBullet),
-    createCommand(Keys.Ctrl | Keys.FORWARDSLASH, Keys.Meta | Keys.FORWARDSLASH, toggleNumbering),
+    createCommand(Keys.Ctrl | Keys.FORWARD_SLASH, Keys.Meta | Keys.FORWARD_SLASH, toggleNumbering),
     createCommand(
         Keys.Ctrl | Keys.Shift | Keys.PERIOD,
         Keys.Meta | Keys.Shift | Keys.PERIOD,
-<span class="fstat-no" title="function not covered" >        editor </span>=&gt; <span class="cstat-no" title="statement not covered" >changeFontSize(editor, FontSizeChange.Increase)</span>
+        editor =&gt; changeFontSize(editor, FontSizeChange.Increase)
     ),
     createCommand(
         Keys.Ctrl | Keys.Shift | Keys.COMMA,
         Keys.Meta | Keys.Shift | Keys.COMMA,
-<span class="fstat-no" title="function not covered" >        editor </span>=&gt; <span class="cstat-no" title="statement not covered" >changeFontSize(editor, FontSizeChange.Decrease)</span>
+        editor =&gt; changeFontSize(editor, FontSizeChange.Decrease)
     ),
 ];
 &nbsp;
@@ -332,31 +338,31 @@ const commands: ShortcutCommand[] = [
  */
 const DefaultShortcut: BuildInEditFeature&lt;PluginKeyboardEvent&gt; = {
     allowFunctionKeys: true,
-    keys: [Keys.B, Keys.I, Keys.U, Keys.Y, Keys.Z, Keys.COMMA, Keys.PERIOD, Keys.FORWARDSLASH],
+    keys: [Keys.B, Keys.I, Keys.U, Keys.Y, Keys.Z, Keys.COMMA, Keys.PERIOD, Keys.FORWARD_SLASH],
     shouldHandleEvent: cacheGetCommand,
-    handleEvent: <span class="fstat-no" title="function not covered" >(e</span>vent, editor) =&gt; {
-        let command = <span class="cstat-no" title="statement not covered" >cacheGetCommand(event);</span>
-<span class="cstat-no" title="statement not covered" >        if (command) {</span>
-<span class="cstat-no" title="statement not covered" >            command.action(editor);</span>
-<span class="cstat-no" title="statement not covered" >            event.rawEvent.preventDefault();</span>
-<span class="cstat-no" title="statement not covered" >            event.rawEvent.stopPropagation();</span>
+    handleEvent: (event, editor) =&gt; {
+        let command = cacheGetCommand(event);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (command) {
+            command.action(editor);
+            event.rawEvent.preventDefault();
+            event.rawEvent.stopPropagation();
         }
     },
 };
 &nbsp;
-function <span class="fstat-no" title="function not covered" >cacheGetCommand(</span>event: PluginKeyboardEvent) {
-<span class="cstat-no" title="statement not covered" >    return cacheGetEventData(event, 'DEFAULT_SHORT_COMMAND', <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
-        let e = <span class="cstat-no" title="statement not covered" >event.rawEvent;</span>
+function cacheGetCommand(event: PluginKeyboardEvent) {
+    return cacheGetEventData(event, 'DEFAULT_SHORT_COMMAND', () =&gt; {
+        let e = event.rawEvent;
         let key =
-            // Need to check ALT key to be false since in some language (e.g. Polski) uses AltGr to input some special charactors
+            // Need to check ALT key to be false since in some language (e.g. Polski) uses AltGr to input some special characters
             // In that case, ctrlKey and altKey are both true in Edge, but we should not trigger any shortcut function here
-<span class="cstat-no" title="statement not covered" >            event.eventType == PluginEventType.KeyDown &amp;&amp; !e.altKey</span>
+            event.eventType == PluginEventType.KeyDown &amp;&amp; !e.altKey
                 ? e.which |
-                  (e.metaKey &amp;&amp; Keys.Meta) |
+                  (e.metaKey<span class="branch-1 cbranch-no" title="branch not covered" > &amp;&amp; Keys.Meta)</span> |
                   (e.shiftKey &amp;&amp; Keys.Shift) |
                   (e.ctrlKey &amp;&amp; Keys.Ctrl)
-                : 0;
-<span class="cstat-no" title="statement not covered" >        return key &amp;&amp; commands.filter(<span class="fstat-no" title="function not covered" >cmd </span>=&gt; <span class="cstat-no" title="statement not covered" >(Browser.isMac ? cmd.macKey : cmd.winKey) == key)[</span>0];</span>
+                : <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+        return key &amp;&amp; commands.filter(cmd =&gt; (Browser.isMac ? <span class="branch-0 cbranch-no" title="branch not covered" >cmd.macKey </span>: cmd.winKey) == key)[0];
     });
 }
 &nbsp;
@@ -375,10 +381,9 @@ export const ShortcutFeatures: Record&lt;
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Feb 03 2021 21:15:16 GMT+0000 (Coordinated Universal Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Wed Mar 16 2022 19:10:31 GMT+0000 (Coordinated Universal Time)
             </div>
-        </div>
         <script src="../../../../../prettify.js"></script>
         <script>
             window.onload = function () {

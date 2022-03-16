@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line medium'></div>
     <pre><table class="coverage">
@@ -162,50 +168,50 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9425x</span>
-<span class="cline-any cline-yes">545x</span>
+<span class="cline-any cline-yes">22174x</span>
+<span class="cline-any cline-yes">1662x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8880x</span>
-<span class="cline-any cline-yes">1827x</span>
+<span class="cline-any cline-yes">20512x</span>
+<span class="cline-any cline-yes">3456x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7053x</span>
-<span class="cline-any cline-yes">895x</span>
-<span class="cline-any cline-yes">895x</span>
+<span class="cline-any cline-yes">17056x</span>
+<span class="cline-any cline-yes">2152x</span>
+<span class="cline-any cline-yes">2152x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7053x</span>
-<span class="cline-any cline-yes">3705x</span>
-<span class="cline-any cline-yes">3705x</span>
+<span class="cline-any cline-yes">17056x</span>
+<span class="cline-any cline-yes">6607x</span>
+<span class="cline-any cline-yes">6607x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7053x</span>
-<span class="cline-any cline-yes">223x</span>
+<span class="cline-any cline-yes">17056x</span>
+<span class="cline-any cline-yes">603x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6830x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16453x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6604x</span>
-<span class="cline-any cline-yes">6604x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14468x</span>
+<span class="cline-any cline-yes">14468x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import safeInstanceOf from '../utils/safeInstanceOf';
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import safeInstanceOf from './safeInstanceOf';
 import { NodeType } from 'roosterjs-editor-types';
 &nbsp;
 /**
@@ -214,12 +220,12 @@ import { NodeType } from 'roosterjs-editor-types';
  * @param contained The node to check if it is inside container
  * @param treatSameNodeAsContain When container and contained are the same node,
  * return true if this param is set to true, otherwise return false. Default value is false
- * @returns True if contained is insied container, or they are the same node when treatSameNodeAsContain is true.
+ * @returns True if contained is inside container, or they are the same node when treatSameNodeAsContain is true.
  * Otherwise false.
  */
 export default function contains(
-    container: Node,
-    contained: Node,
+    container: Node | null,
+    contained: Node | null,
     treatSameNodeAsContain?: boolean
 ): boolean;
 &nbsp;
@@ -227,13 +233,13 @@ export default function contains(
  * Test if a node contains a given range
  * @param container The container node
  * @param contained The range to check if it is inside container
- * @returns True if contained is insied container, otherwise false
+ * @returns True if contained is inside container, otherwise false
  */
-export default function contains(container: Node, contained: Range): boolean;
+export default function contains(container: Node | null, contained: Range | null): boolean;
 &nbsp;
 export default function contains(
-    container: Node,
-    contained: Node | Range,
+    container: Node | null,
+    contained: Node | Range | null,
     treatSameNodeAsContain?: boolean
 ): boolean {
     if (!container || !contained) {
@@ -264,7 +270,7 @@ export default function contains(
     );
 }
 &nbsp;
-function internalContains(container: Node, contained: Node): boolean {
+function internalContains(container: Node, contained: Node | null): boolean {
     <span class="missing-if-branch" title="else path not taken" >E</span>if (container.contains) {
         return container.contains(contained);
     } else {
@@ -285,10 +291,9 @@ function internalContains(container: Node, contained: Node): boolean {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Feb 03 2021 21:15:16 GMT+0000 (Coordinated Universal Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Wed Mar 16 2022 19:10:31 GMT+0000 (Coordinated Universal Time)
             </div>
-        </div>
         <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {

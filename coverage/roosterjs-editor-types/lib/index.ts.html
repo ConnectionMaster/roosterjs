@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>46/46</span>
+                <span class='fraction'>59/59</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/30</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line high'></div>
     <pre><table class="coverage">
@@ -234,13 +240,47 @@
 <a name='L175'></a><a href='#L175'>175</a>
 <a name='L176'></a><a href='#L176'>176</a>
 <a name='L177'></a><a href='#L177'>177</a>
-<a name='L178'></a><a href='#L178'>178</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -261,6 +301,12 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -382,6 +428,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -413,38 +485,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Browser
 export { default as BrowserInfo } from './browser/BrowserInfo';
-export { DocumentCommand } from './browser/DocumentCommand';
-export { DocumentPosition } from './browser/DocumentPosition';
+export { <span class="fstat-no" title="function not covered" >DocumentCommand </span>} from './browser/DocumentCommand';
+export { <span class="fstat-no" title="function not covered" >DocumentPosition </span>} from './browser/DocumentPosition';
 export { default as EdgeLinkPreview } from './browser/EdgeLinkPreview';
-export { Keys } from './browser/Keys';
-export { NodeType } from './browser/NodeType';
+export { <span class="fstat-no" title="function not covered" >Keys </span>} from './browser/Keys';
+export { <span class="fstat-no" title="function not covered" >NodeType </span>} from './browser/NodeType';
+export { <span class="fstat-no" title="function not covered" >ContentTypePrefix,</span> <span class="fstat-no" title="function not covered" >ContentType </span>} from './browser/ContentType';
 &nbsp;
 // Enum
-export { Alignment } from './enum/Alignment';
-export { ChangeSource } from './enum/ChangeSource';
-export { ColorTransformDirection } from './enum/ColorTransformDirection';
-export { ContentPosition } from './enum/ContentPosition';
-export { DarkModeDatasetNames } from './enum/DarkModeDatasetNames';
-export { Direction } from './enum/Direction';
-export { EntityClasses } from './enum/EntityClasses';
-export { EntityOperation } from './enum/EntityOperation';
-export { ExperimentalFeatures } from './enum/ExperimentalFeatures';
-export { FontSizeChange } from './enum/FontSizeChange';
-export { GetContentMode } from './enum/GetContentMode';
-export { Indentation } from './enum/Indentation';
-export { Capitalization } from './enum/Capitalization';
-export { ListType } from './enum/ListType';
-export { PositionType } from './enum/PositionType';
-export { QueryScope } from './enum/QueryScope';
-export { RegionType } from './enum/RegionType';
-export { TableOperation } from './enum/TableOperation';
+export { <span class="fstat-no" title="function not covered" >Alignment </span>} from './enum/Alignment';
+export { <span class="fstat-no" title="function not covered" >ChangeSource </span>} from './enum/ChangeSource';
+export { <span class="fstat-no" title="function not covered" >ColorTransformDirection </span>} from './enum/ColorTransformDirection';
+export { <span class="fstat-no" title="function not covered" >ContentPosition </span>} from './enum/ContentPosition';
+export { <span class="fstat-no" title="function not covered" >DarkModeDatasetNames </span>} from './enum/DarkModeDatasetNames';
+export { <span class="fstat-no" title="function not covered" >Direction </span>} from './enum/Direction';
+export { <span class="fstat-no" title="function not covered" >EntityClasses </span>} from './enum/EntityClasses';
+export { <span class="fstat-no" title="function not covered" >EntityOperation </span>} from './enum/EntityOperation';
+export { <span class="fstat-no" title="function not covered" >ExperimentalFeatures </span>} from './enum/ExperimentalFeatures';
+export { <span class="fstat-no" title="function not covered" >FontSizeChange </span>} from './enum/FontSizeChange';
+export { <span class="fstat-no" title="function not covered" >GetContentMode </span>} from './enum/GetContentMode';
+export { <span class="fstat-no" title="function not covered" >Indentation </span>} from './enum/Indentation';
+export { <span class="fstat-no" title="function not covered" >Capitalization </span>} from './enum/Capitalization';
+export { <span class="fstat-no" title="function not covered" >ListType </span>} from './enum/ListType';
+export { <span class="fstat-no" title="function not covered" >PositionType </span>} from './enum/PositionType';
+export { <span class="fstat-no" title="function not covered" >QueryScope </span>} from './enum/QueryScope';
+export { <span class="fstat-no" title="function not covered" >RegionType </span>} from './enum/RegionType';
+export { <span class="fstat-no" title="function not covered" >TableOperation </span>} from './enum/TableOperation';
+export { <span class="fstat-no" title="function not covered" >ImageEditOperation </span>} from './enum/ImageEditOperation';
+export { <span class="fstat-no" title="function not covered" >ClearFormatMode </span>} from './enum/ClearFormatMode';
+export { <span class="fstat-no" title="function not covered" >KnownCreateElementDataIndex </span>} from './enum/KnownCreateElementDataIndex';
+export { <span class="fstat-no" title="function not covered" >TableBorderFormat </span>} from './enum/TableBorderFormat';
 &nbsp;
 // Event
 export { default as BeforeCutCopyEvent } from './event/BeforeCutCopyEvent';
 export { default as BasePluginEvent } from './event/BasePluginEvent';
 export { default as BeforeDisposeEvent } from './event/BeforeDisposeEvent';
 export { default as BeforePasteEvent } from './event/BeforePasteEvent';
+export { default as BeforeSetContentEvent } from './event/BeforeSetContentEvent';
 export { default as ContentChangedEvent } from './event/ContentChangedEvent';
+export { default as EditImageEvent } from './event/EditImageEvent';
 export { default as EditorReadyEvent } from './event/EditorReadyEvent';
 export { default as EntityOperationEvent } from './event/EntityOperationEvent';
 export { default as ExtractContentWithDomEvent } from './event/ExtractContentWithDomEvent';
@@ -465,13 +544,15 @@ export {
     PluginScrollEvent,
 } from './event/PluginDomEvent';
 export { PluginEvent } from './event/PluginEvent';
-export { PluginEventType } from './event/PluginEventType';
+export { <span class="fstat-no" title="function not covered" >PluginEventType </span>} from './event/PluginEventType';
 export {
     PluginEventData,
     PluginEventDataGeneric,
     PluginEventFromType,
     PluginEventFromTypeGeneric,
 } from './event/PluginEventData';
+export { EnterShadowEditEvent, LeaveShadowEditEvent } from './event/ShadowEditEvent';
+export { default as ZoomChangedEvent } from './event/ZoomChangedEvent';
 &nbsp;
 // Interface
 export { default as BlockElement } from './interface/BlockElement';
@@ -487,7 +568,11 @@ export {
     StyleBasedFormatState,
     EditorUndoState,
 } from './interface/FormatState';
-export { default as ExtractClipboardEventOption } from './interface/ExtractClipboardEventOption';
+export {
+    default as ExtractClipboardEventOption,
+    ExtractClipboardItemsOption,
+    ExtractClipboardItemsForIEOptions,
+} from './interface/ExtractClipboardEventOption';
 export { default as IContentTraverser } from './interface/IContentTraverser';
 export { default as InlineElement } from './interface/InlineElement';
 export {
@@ -506,15 +591,18 @@ export { default as RegionBase } from './interface/RegionBase';
 export { default as SelectionPath } from './interface/SelectionPath';
 export { default as Snapshots } from './interface/Snapshots';
 export { default as TableFormat } from './interface/TableFormat';
+export { default as TableSelection } from './interface/TableSelection';
+export { default as Coordinates } from './interface/Coordinates';
 export { default as HtmlSanitizerOptions } from './interface/HtmlSanitizerOptions';
 export { default as SanitizeHtmlOptions } from './interface/SanitizeHtmlOptions';
+export { default as TargetWindowBase } from './interface/TargetWindowBase';
 export { default as TargetWindow } from './interface/TargetWindow';
-export { default as IEditor } from './interface/IEditor';
 export {
+    default as IEditor,
     ContentEditFeature,
     GenericContentEditFeature,
     BuildInEditFeature,
-} from './interface/ContentEditFeature';
+} from './interface/IEditor';
 export { default as EditorPlugin } from './interface/EditorPlugin';
 export { default as PluginWithState } from './interface/PluginWithState';
 export {
@@ -536,14 +624,18 @@ export {
     Focus,
     GetContent,
     GetSelectionRange,
+    GetSelectionRangeEx,
     GetStyleBasedFormatState,
+    GetPendableFormatState,
     HasFocus,
     InsertNode,
     RestoreUndoSnapshot,
     SelectRange,
     SetContent,
+    SwitchShadowEdit,
     TransformColor,
     TriggerEvent,
+    SelectTable,
 } from './interface/EditorCore';
 export { default as EditorOptions } from './interface/EditorOptions';
 export {
@@ -557,12 +649,22 @@ export {
     ShortcutFeatureSettings,
     StructuredNodeFeatureSettings,
     TableFeatureSettings,
+    TextFeatureSettings,
 } from './interface/ContentEditFeatureSettings';
 export { default as CustomReplacement } from './interface/CustomReplacement';
 export { default as UndoSnapshotsService } from './interface/UndoSnapshotsService';
 export { default as PickerDataProvider } from './interface/PickerDataProvider';
 export { default as PickerPluginOptions } from './interface/PickerPluginOptions';
 export { default as VCell } from './interface/VCell';
+export { default as ImageEditOptions } from './interface/ImageEditOptions';
+export { default as CreateElementData } from './interface/CreateElementData';
+export {
+    SelectionRangeExBase,
+    NormalSelectionRange,
+    TableSelectionRange,
+    SelectionRangeEx,
+<span class="fstat-no" title="function not covered" >    SelectionRangeTypes,</span>
+} from './interface/SelectionRangeEx';
 &nbsp;
 // Core Plugin State
 export { default as DOMEventPluginState } from './corePluginState/DOMEventPluginState';
@@ -571,6 +673,7 @@ export { default as EntityPluginState } from './corePluginState/EntityPluginStat
 export { default as LifecyclePluginState } from './corePluginState/LifecyclePluginState';
 export { default as PendingFormatStatePluginState } from './corePluginState/PendingFormatStatePluginState';
 export { default as UndoPluginState } from './corePluginState/UndoPluginState';
+export { default as CopyPastePluginState } from './corePluginState/CopyPastePluginState';
 &nbsp;
 // Other type
 export {
@@ -588,16 +691,17 @@ export {
     DOMEventHandlerObject,
     DOMEventHandler,
 } from './type/domEventHandler';
+export { TrustedHTMLHandler } from './type/TrustedHTMLHandler';
+export { SizeTransformer } from './type/SizeTransformer';
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Feb 03 2021 21:15:16 GMT+0000 (Coordinated Universal Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Wed Mar 16 2022 19:10:31 GMT+0000 (Coordinated Universal Time)
             </div>
-        </div>
         <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {

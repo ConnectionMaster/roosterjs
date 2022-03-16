@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.86% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>13/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -54,6 +54,12 @@
         <p class="quiet">
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
     <div class='status-line high'></div>
     <pre><table class="coverage">
@@ -193,7 +199,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -227,12 +233,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">41x</span>
-<span class="cline-any cline-yes">222x</span>
-<span class="cline-any cline-yes">222x</span>
-<span class="cline-any cline-yes">222x</span>
-<span class="cline-any cline-yes">222x</span>
-<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">96x</span>
+<span class="cline-any cline-yes">460x</span>
+<span class="cline-any cline-yes">460x</span>
+<span class="cline-any cline-yes">460x</span>
+<span class="cline-any cline-yes">460x</span>
+<span class="cline-any cline-yes">48x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -241,7 +247,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">48x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { LinkData } from 'roosterjs-editor-types';
 &nbsp;
@@ -252,7 +258,7 @@ interface LinkMatchRule {
 }
 &nbsp;
 // http exclude matching regex
-// invalid URL example (in paricular on IE and Edge):
+// invalid URL example (in particular on IE and Edge):
 // - http://www.bing.com%00, %00 before ? (question mark) is considered invalid. IE/Edge throws invalid argument exception
 // - http://www.bing.com%1, %1 is invalid
 // - http://www.bing.com%g, %g is invalid (IE and Edge expects a two hex value after a %)
@@ -261,7 +267,7 @@ interface LinkMatchRule {
 // Similar for @, it needs to be after / (forward slash), or ? (question mark). Otherwise IE/Edge will throw security exception
 // - http://www.bing.com@name, @name before ? (question mark) is considered invalid
 // - http://www.bing.com/@name, is valid sine it is after / (forward slash)
-// - http://www.bing.com?@name, is also valid sinve it is after ? (question mark)
+// - http://www.bing.com?@name, is also valid since it is after ? (question mark)
 // The regex below is essentially a break down of:
 // ^[^?]+%[^0-9a-f]+ =&gt; to exclude URL like www.bing.com%%
 // ^[^?]+%[0-9a-f][^0-9a-f]+ =&gt; to exclude URL like www.bing.com%1
@@ -273,7 +279,7 @@ interface LinkMatchRule {
 const httpExcludeRegEx = /^[^?]+%[^0-9a-f]+|^[^?]+%[0-9a-f][^0-9a-f]+|^[^?]+%00|^[^?]+%$|^https?:\/\/[^?\/]+@|^www\.[^?\/]+@/i;
 &nbsp;
 // via https://tools.ietf.org/html/rfc1035 Page 7
-const labelRegEx = '[a-z0-9](?:[a-z0-9-]*[a-z0-9])?'; // We're using case insensitive regexes below so don't bother including A-Z
+const labelRegEx = '[a-z0-9](?:[a-z0-9-]*[a-z0-9])?'; // We're using case insensitive regexps below so don't bother including A-Z
 const domainNameRegEx = `(?:${labelRegEx}\\.)*${labelRegEx}`;
 const domainPortRegEx = `${domainNameRegEx}(?:\\:[0-9]+)?`;
 const domainPortWithUrlRegEx = `${domainPortRegEx}(?:[\\/\\?]\\S*)?`;
@@ -319,8 +325,8 @@ const linkMatchRules: { [schema: string]: LinkMatchRule } = {
  * @returns The matched link data, or null if no match found.
  * The link data includes an original url and a normalized url
  */
-export default function matchLink(url: string): LinkData {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (url) {
+export default function matchLink(url: string): LinkData | null {
+    if (url) {
         for (let schema of Object.keys(linkMatchRules)) {
             let rule = linkMatchRules[schema];
             let matches = url.match(rule.match);
@@ -342,10 +348,9 @@ export default function matchLink(url: string): LinkData {
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
-                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Feb 03 2021 21:15:16 GMT+0000 (Coordinated Universal Time)
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Wed Mar 16 2022 19:10:31 GMT+0000 (Coordinated Universal Time)
             </div>
-        </div>
         <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
