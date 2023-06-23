@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EditorCore | RoosterJs API Reference - v8.17.0</title>
-	<meta name="description" content="Documentation for RoosterJs API Reference - v8.17.0">
+	<title>EditorCore | RoosterJs API Reference</title>
+	<meta name="description" content="Documentation for RoosterJs API Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">RoosterJs API Reference - v8.17.0</a>
+					<a href="../index.html" class="title">RoosterJs API Reference</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">RoosterJs API Reference - v8.17.0</a>
+					<a href="../modules.html">RoosterJs API Reference</a>
 				</li>
 				<li>
 					<a href="../modules/roosterjs_editor_types.html">roosterjs-editor-types</a>
@@ -81,6 +81,11 @@
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">EditorCore</span>
+								<ul class="tsd-hierarchy">
+									<li>
+										<a href="roosterjs_content_model_editor.contentmodeleditorcore.html" class="tsd-signature-type" data-tsd-kind="Interface">ContentModelEditorCore</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -95,6 +100,10 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#api" class="tsd-kind-icon">api</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#contentdiv" class="tsd-kind-icon">content<wbr>Div</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#darkcolorhandler" class="tsd-kind-icon">dark<wbr>Color<wbr>Handler</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#getvisibleviewport" class="tsd-kind-icon">get<wbr>Visible<wbr>Viewport</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#imageselectionbordercolor" class="tsd-kind-icon">image<wbr>Selection<wbr>Border<wbr>Color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#originalapi" class="tsd-kind-icon">original<wbr>Api</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#plugins" class="tsd-kind-icon">plugins</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#sizetransformer" class="tsd-kind-icon">size<wbr>Transformer</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.editorcore.html#trustedhtmlhandler" class="tsd-kind-icon">trustedHTMLHandler</a></li>
@@ -124,7 +133,7 @@
 					<div class="tsd-signature tsd-kind-icon">api<span class="tsd-signature-symbol">:</span> <a href="roosterjs_editor_types.coreapimap.html" class="tsd-signature-type" data-tsd-kind="Interface">CoreApiMap</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L35">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:35</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L43">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -139,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">content<wbr>Div<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLDivElement</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L25">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L33">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:33</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -149,12 +158,88 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="darkcolorhandler" class="tsd-anchor"></a>
+					<h3>dark<wbr>Color<wbr>Handler</h3>
+					<div class="tsd-signature tsd-kind-icon">dark<wbr>Color<wbr>Handler<span class="tsd-signature-symbol">:</span> <a href="roosterjs_editor_types.darkcolorhandler.html" class="tsd-signature-type" data-tsd-kind="Interface">DarkColorHandler</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L83">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:83</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Dark model handler for the editor, used for variable-based solution.
+							If keep it null, editor will still use original dataset-based dark mode solution.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="getvisibleviewport" class="tsd-anchor"></a>
+					<h3>get<wbr>Visible<wbr>Viewport</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Visible<wbr>Viewport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="roosterjs_editor_types.rect.html" class="tsd-signature-type" data-tsd-kind="Interface">Rect</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L72">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:72</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="roosterjs_editor_types.rect.html" class="tsd-signature-type" data-tsd-kind="Interface">Rect</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<div class="tsd-comment tsd-typography">
+											<div class="lead">
+												<p>Retrieves the Visible Viewport of the editor.</p>
+											</div>
+										</div>
+										<h4 class="tsd-returns-title">Returns <a href="roosterjs_editor_types.rect.html" class="tsd-signature-type" data-tsd-kind="Interface">Rect</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="imageselectionbordercolor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> image<wbr>Selection<wbr>Border<wbr>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">image<wbr>Selection<wbr>Border<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L77">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:77</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Color of the border of a selectedImage. Default color: &#39;#DB626C&#39;</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="originalapi" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> original<wbr>Api</h3>
+					<div class="tsd-signature tsd-kind-icon">original<wbr>Api<span class="tsd-signature-symbol">:</span> <a href="roosterjs_editor_types.coreapimap.html" class="tsd-signature-type" data-tsd-kind="Interface">CoreApiMap</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L48">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:48</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Original API map of this editor. Overridden core API can use API from this map to call the original version of core API.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="plugins" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> plugins</h3>
 					<div class="tsd-signature tsd-kind-icon">plugins<span class="tsd-signature-symbol">:</span> <a href="roosterjs_editor_types.editorplugin.html" class="tsd-signature-type" data-tsd-kind="Interface">EditorPlugin</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L30">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L38">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:38</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,7 +254,7 @@
 					<div class="tsd-signature tsd-kind-icon">size<wbr>Transformer<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_editor_types.html#sizetransformer" class="tsd-signature-type" data-tsd-kind="Type alias">SizeTransformer</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L54">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L67">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:67</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -186,7 +271,7 @@
 					<div class="tsd-signature tsd-kind-icon">trustedHTMLHandler<span class="tsd-signature-symbol">:</span> <a href="../modules/roosterjs_editor_types.html#trustedhtmlhandler" class="tsd-signature-type" data-tsd-kind="Type alias">TrustedHTMLHandler</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L42">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L55">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:55</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -203,7 +288,7 @@
 					<div class="tsd-signature tsd-kind-icon">zoom<wbr>Scale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L49">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/EditorCore.ts#L62">packages/roosterjs-editor-types/lib/interface/EditorCore.ts:62</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -281,6 +366,18 @@
 						<a href="../modules/roosterjs_color_utils.html">roosterjs-<wbr>color-<wbr>utils</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model.html">roosterjs-<wbr>content-<wbr>model</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_dom.html">roosterjs-<wbr>content-<wbr>model-<wbr>dom</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_editor.html">roosterjs-<wbr>content-<wbr>model-<wbr>editor</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_types.html">roosterjs-<wbr>content-<wbr>model-<wbr>types</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_editor_api.html">roosterjs-<wbr>editor-<wbr>api</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -294,6 +391,9 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/roosterjs_editor_types.html">roosterjs-<wbr>editor-<wbr>types</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_editor_types_compatible.html">roosterjs-<wbr>editor-<wbr>types-<wbr>compatible</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_react.html">roosterjs-<wbr>react</a>
@@ -312,6 +412,18 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_editor_types.editorcore.html#contentdiv" class="tsd-kind-icon">content<wbr>Div</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_editor_types.editorcore.html#darkcolorhandler" class="tsd-kind-icon">dark<wbr>Color<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_editor_types.editorcore.html#getvisibleviewport" class="tsd-kind-icon">get<wbr>Visible<wbr>Viewport</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_editor_types.editorcore.html#imageselectionbordercolor" class="tsd-kind-icon">image<wbr>Selection<wbr>Border<wbr>Color</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_editor_types.editorcore.html#originalapi" class="tsd-kind-icon">original<wbr>Api</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_editor_types.editorcore.html#plugins" class="tsd-kind-icon">plugins</a>

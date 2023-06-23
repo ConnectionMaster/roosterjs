@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>TableFeatureSettings | RoosterJs API Reference - v8.17.0</title>
-	<meta name="description" content="Documentation for RoosterJs API Reference - v8.17.0">
+	<title>TableFeatureSettings | RoosterJs API Reference</title>
+	<meta name="description" content="Documentation for RoosterJs API Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">RoosterJs API Reference - v8.17.0</a>
+					<a href="../index.html" class="title">RoosterJs API Reference</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">RoosterJs API Reference - v8.17.0</a>
+					<a href="../modules.html">RoosterJs API Reference</a>
 				</li>
 				<li>
 					<a href="../modules/roosterjs_editor_types.html">roosterjs-editor-types</a>
@@ -93,6 +93,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.tablefeaturesettings.html#deletetablewithbackspace" class="tsd-kind-icon">delete<wbr>Table<wbr>With<wbr>Backspace</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.tablefeaturesettings.html#indenttableontab" class="tsd-kind-icon">indent<wbr>Table<wbr>OnTab</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.tablefeaturesettings.html#tabintable" class="tsd-kind-icon">tab<wbr>InTable</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_editor_types.tablefeaturesettings.html#updownintable" class="tsd-kind-icon">up<wbr>Down<wbr>InTable</a></li>
 							</ul>
@@ -103,12 +105,43 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="deletetablewithbackspace" class="tsd-anchor"></a>
+					<h3>delete<wbr>Table<wbr>With<wbr>Backspace</h3>
+					<div class="tsd-signature tsd-kind-icon">delete<wbr>Table<wbr>With<wbr>Backspace<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts#L252">packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts:252</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Requires @see ExperimentalFeatures.DeleteTableWithBackspace
+							Delete a table selected with the table selector pressing  Backspace key</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="indenttableontab" class="tsd-anchor"></a>
+					<h3>indent<wbr>Table<wbr>OnTab</h3>
+					<div class="tsd-signature tsd-kind-icon">indent<wbr>Table<wbr>OnTab<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts#L246">packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts:246</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>IndentTableOnTab edit feature, provides the ability to indent the table if it is all cells are selected.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="tabintable" class="tsd-anchor"></a>
 					<h3>tab<wbr>InTable</h3>
 					<div class="tsd-signature tsd-kind-icon">tab<wbr>InTable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts#L195">packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts:195</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts#L235">packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts:235</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -128,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">up<wbr>Down<wbr>InTable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts#L201">packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts:201</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts#L241">packages/roosterjs-editor-types/lib/interface/ContentEditFeatureSettings.ts:241</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,6 +190,18 @@
 						<a href="../modules/roosterjs_color_utils.html">roosterjs-<wbr>color-<wbr>utils</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model.html">roosterjs-<wbr>content-<wbr>model</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_dom.html">roosterjs-<wbr>content-<wbr>model-<wbr>dom</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_editor.html">roosterjs-<wbr>content-<wbr>model-<wbr>editor</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_types.html">roosterjs-<wbr>content-<wbr>model-<wbr>types</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_editor_api.html">roosterjs-<wbr>editor-<wbr>api</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -172,6 +217,9 @@
 						<a href="../modules/roosterjs_editor_types.html">roosterjs-<wbr>editor-<wbr>types</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_editor_types_compatible.html">roosterjs-<wbr>editor-<wbr>types-<wbr>compatible</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_react.html">roosterjs-<wbr>react</a>
 					</li>
 				</ul>
@@ -183,6 +231,12 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="roosterjs_editor_types.tablefeaturesettings.html" class="tsd-kind-icon">Table<wbr>Feature<wbr>Settings</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_editor_types.tablefeaturesettings.html#deletetablewithbackspace" class="tsd-kind-icon">delete<wbr>Table<wbr>With<wbr>Backspace</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_editor_types.tablefeaturesettings.html#indenttableontab" class="tsd-kind-icon">indent<wbr>Table<wbr>OnTab</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="roosterjs_editor_types.tablefeaturesettings.html#tabintable" class="tsd-kind-icon">tab<wbr>InTable</a>
 							</li>

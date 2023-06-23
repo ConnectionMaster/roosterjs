@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>VList | RoosterJs API Reference - v8.17.0</title>
-	<meta name="description" content="Documentation for RoosterJs API Reference - v8.17.0">
+	<title>VList | RoosterJs API Reference</title>
+	<meta name="description" content="Documentation for RoosterJs API Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">RoosterJs API Reference - v8.17.0</a>
+					<a href="../index.html" class="title">RoosterJs API Reference</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">RoosterJs API Reference - v8.17.0</a>
+					<a href="../modules.html">RoosterJs API Reference</a>
 				</li>
 				<li>
 					<a href="../modules/roosterjs_editor_dom.html">roosterjs-editor-dom</a>
@@ -131,6 +131,7 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#items" class="tsd-kind-icon">items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#rootlist" class="tsd-kind-icon">root<wbr>List</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -140,8 +141,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#changelisttype" class="tsd-kind-icon">change<wbr>List<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#contains" class="tsd-kind-icon">contains</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#getlastitemnumber" class="tsd-kind-icon">get<wbr>Last<wbr>Item<wbr>Number</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#getlistitemindex" class="tsd-kind-icon">get<wbr>List<wbr>Item<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#getstart" class="tsd-kind-icon">get<wbr>Start</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#mergevlist" class="tsd-kind-icon">mergeVList</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#setalignment" class="tsd-kind-icon">set<wbr>Alignment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#setindentation" class="tsd-kind-icon">set<wbr>Indentation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#setliststyletype" class="tsd-kind-icon">set<wbr>List<wbr>Style<wbr>Type</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#split" class="tsd-kind-icon">split</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_editor_dom.vlist.html#writeback" class="tsd-kind-icon">write<wbr>Back</a></li>
 							</ul>
@@ -161,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L64">packages/roosterjs-editor-dom/lib/list/VList.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L75">packages/roosterjs-editor-dom/lib/list/VList.ts:75</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,8 +196,15 @@
 					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="roosterjs_editor_dom.vlistitem.html" class="tsd-signature-type" data-tsd-kind="Class">VListItem</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L64">packages/roosterjs-editor-dom/lib/list/VList.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L75">packages/roosterjs-editor-dom/lib/list/VList.ts:75</a></li>
 						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="rootlist" class="tsd-anchor"></a>
+					<h3>root<wbr>List</h3>
+					<div class="tsd-signature tsd-kind-icon">root<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLUListElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLOListElement</span></div>
+					<aside class="tsd-sources">
 					</aside>
 				</section>
 			</section>
@@ -202,13 +214,13 @@
 					<a name="appenditem" class="tsd-anchor"></a>
 					<h3>append<wbr>Item</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">append<wbr>Item<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Node</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">append<wbr>Item<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Node</span>, type<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblelisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleListType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L298">packages/roosterjs-editor-dom/lib/list/VList.ts:298</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L376">packages/roosterjs-editor-dom/lib/list/VList.ts:376</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -225,7 +237,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>type: <a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a></h5>
+									<h5>type: <a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblelisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleListType</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Type of this list item, can be ListType.None</p>
 									</div>
@@ -239,13 +251,13 @@
 					<a name="changelisttype" class="tsd-anchor"></a>
 					<h3>change<wbr>List<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">change<wbr>List<wbr>Type<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, targetType<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">change<wbr>List<wbr>Type<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, targetType<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblelisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleListType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L282">packages/roosterjs-editor-dom/lib/list/VList.ts:282</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L337">packages/roosterjs-editor-dom/lib/list/VList.ts:337</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -270,7 +282,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>targetType: <a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a></h5>
+									<h5>targetType: <a href="../enums/roosterjs_editor_types.listtype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblelisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleListType</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Target list type</p>
 									</div>
@@ -290,7 +302,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L140">packages/roosterjs-editor-dom/lib/list/VList.ts:140</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L151">packages/roosterjs-editor-dom/lib/list/VList.ts:151</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -321,7 +333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L151">packages/roosterjs-editor-dom/lib/list/VList.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L162">packages/roosterjs-editor-dom/lib/list/VList.ts:162</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -335,6 +347,80 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getlistitemindex" class="tsd-anchor"></a>
+					<h3>get<wbr>List<wbr>Item<wbr>Index</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>List<wbr>Item<wbr>Index<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L432">packages/roosterjs-editor-dom/lib/list/VList.ts:432</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the index of the List Item in the current List
+										If the root list is:
+									Ordered list, the listIndex start count is going to be the start property of the OL - 1,</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>For example if we want to find the index of Item 2 in the list below, the returned index is going to be 6</p>
+										<ul>
+											<li><pre><code class="language-html"><span style="color: #800000">&lt;ol</span><span style="color: #000000"> </span><span style="color: #FF0000">start</span><span style="color: #000000">=</span><span style="color: #0000FF">&quot;5&quot;</span><span style="color: #800000">&gt;</span>
+<span style="color: #800000">&lt;li&gt;</span><span style="color: #000000">item 1</span><span style="color: #800000">&lt;/li&gt;</span>
+<span style="color: #800000">&lt;li&gt;</span><span style="color: #000000">item 2</span><span style="color: #800000">&lt;/li&gt;</span><span style="color: #000000"> </span><span style="color: #008000">&lt;!-- Node to find --&gt;</span>
+<span style="color: #800000">&lt;li&gt;</span><span style="color: #000000">item 3</span><span style="color: #800000">&lt;/li&gt;</span>
+<span style="color: #800000">&lt;/ol&gt;</span>
+</code></pre>
+												Unordered list, the listIndex start count starts from 0
+												@example For example if we want to find the index of Item 2 in the list below, the returned index is going to be 2<pre><code class="language-html"><span style="color: #800000">&lt;ul&gt;</span>
+<span style="color: #800000">&lt;li&gt;</span><span style="color: #000000">item 1</span><span style="color: #800000">&lt;/li&gt;</span>
+<span style="color: #800000">&lt;li&gt;</span><span style="color: #000000">item 2</span><span style="color: #800000">&lt;/li&gt;</span><span style="color: #000000"> </span><span style="color: #008000">&lt;!-- Node to find --&gt;</span>
+<span style="color: #800000">&lt;li&gt;</span><span style="color: #000000">item 3</span><span style="color: #800000">&lt;/li&gt;</span>
+<span style="color: #800000">&lt;/ul&gt;</span>
+</code></pre>
+											@param input List item to find in the root list</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">Node</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getstart" class="tsd-anchor"></a>
+					<h3>get<wbr>Start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L454">packages/roosterjs-editor-dom/lib/list/VList.ts:454</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the Start property of the root list of this VList</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>Start number of the list</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="mergevlist" class="tsd-anchor"></a>
 					<h3>mergeVList</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -344,7 +430,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L319">packages/roosterjs-editor-dom/lib/list/VList.ts:319</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L401">packages/roosterjs-editor-dom/lib/list/VList.ts:401</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -372,17 +458,60 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setindentation" class="tsd-anchor"></a>
-					<h3>set<wbr>Indentation</h3>
+					<a name="setalignment" class="tsd-anchor"></a>
+					<h3>set<wbr>Alignment</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Indentation<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, indentation<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.indentation.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Indentation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Indentation<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, indentation<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.indentation.html#decrease" class="tsd-signature-type" data-tsd-kind="Enumeration member">Decrease</a>, softOutdent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Alignment<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, alignment<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.alignment.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Alignment</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblealignment.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleAlignment</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L242">packages/roosterjs-editor-dom/lib/list/VList.ts:242</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L311">packages/roosterjs-editor-dom/lib/list/VList.ts:311</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set alignment of the given range of this list</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>start: <a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Start position to operate from</p>
+									</div>
+								</li>
+								<li>
+									<h5>end: <a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>End position to operate to</p>
+									</div>
+								</li>
+								<li>
+									<h5>alignment: <a href="../enums/roosterjs_editor_types.alignment.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Alignment</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblealignment.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleAlignment</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Align items left, center or right</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setindentation" class="tsd-anchor"></a>
+					<h3>set<wbr>Indentation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Indentation<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, indentation<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.indentation.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Indentation</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatibleindentation.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleIndentation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Indentation<span class="tsd-signature-symbol">(</span>start<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, end<span class="tsd-signature-symbol">: </span><a href="../interfaces/roosterjs_editor_types.nodeposition.html" class="tsd-signature-type" data-tsd-kind="Interface">NodePosition</a>, indentation<span class="tsd-signature-symbol">: </span><a href="../enums/roosterjs_editor_types.indentation.html#decrease" class="tsd-signature-type" data-tsd-kind="Enumeration member">Decrease</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatibleindentation.html#decrease" class="tsd-signature-type" data-tsd-kind="Enumeration member">Decrease</a>, softOutdent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, preventItemRemoval<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L256">packages/roosterjs-editor-dom/lib/list/VList.ts:256</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -405,7 +534,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>indentation: <a href="../enums/roosterjs_editor_types.indentation.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Indentation</a></h5>
+									<h5>indentation: <a href="../enums/roosterjs_editor_types.indentation.html" class="tsd-signature-type" data-tsd-kind="Enumeration">Indentation</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatibleindentation.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleIndentation</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Indent or outdent</p>
 									</div>
@@ -416,7 +545,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L252">packages/roosterjs-editor-dom/lib/list/VList.ts:252</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L272">packages/roosterjs-editor-dom/lib/list/VList.ts:272</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -439,7 +568,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>indentation: <a href="../enums/roosterjs_editor_types.indentation.html#decrease" class="tsd-signature-type" data-tsd-kind="Enumeration member">Decrease</a></h5>
+									<h5>indentation: <a href="../enums/roosterjs_editor_types.indentation.html#decrease" class="tsd-signature-type" data-tsd-kind="Enumeration member">Decrease</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatibleindentation.html#decrease" class="tsd-signature-type" data-tsd-kind="Enumeration member">Decrease</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Specify to outdent</p>
 									</div>
@@ -449,6 +578,51 @@
 									<div class="tsd-comment tsd-typography">
 										<p>(Optional) True to make the item to by dummy (no bullet or number) if the item is not dummy,
 										otherwise outdent the item</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> preventItemRemoval: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(Optional) True to prevent the indentation to remove the bullet when outdenting a first
+										level list item, by default is false</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setliststyletype" class="tsd-anchor"></a>
+					<h3>set<wbr>List<wbr>Style<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>List<wbr>Style<wbr>Type<span class="tsd-signature-symbol">(</span>orderedStyle<span class="tsd-signature-symbol">?: </span><a href="../enums/roosterjs_editor_types.numberinglisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">NumberingListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblenumberinglisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleNumberingListType</a>, unorderedStyle<span class="tsd-signature-symbol">?: </span><a href="../enums/roosterjs_editor_types.bulletlisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">BulletListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblebulletlisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleBulletListType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L358">packages/roosterjs-editor-dom/lib/list/VList.ts:358</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Change list style of the given range of this list.
+									If some of the items are not real list item yet, this will make them to be list item with given style</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> orderedStyle: <a href="../enums/roosterjs_editor_types.numberinglisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">NumberingListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblenumberinglisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleNumberingListType</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The style of ordered list</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> unorderedStyle: <a href="../enums/roosterjs_editor_types.bulletlisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">BulletListType</a><span class="tsd-signature-symbol"> | </span><a href="../enums/roosterjs_editor_types_compatible.compatiblebulletlisttype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CompatibleBulletListType</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The style of unordered list</p>
 									</div>
 								</li>
 							</ul>
@@ -466,7 +640,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L222">packages/roosterjs-editor-dom/lib/list/VList.ts:222</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L236">packages/roosterjs-editor-dom/lib/list/VList.ts:236</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -497,13 +671,13 @@
 					<a name="writeback" class="tsd-anchor"></a>
 					<h3>write<wbr>Back</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Back<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Back<span class="tsd-signature-symbol">(</span>shouldReuseAllAncestorListElements<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/fac35a7/packages/roosterjs-editor-dom/lib/list/VList.ts#L170">packages/roosterjs-editor-dom/lib/list/VList.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/6866b5b/packages/roosterjs-editor-dom/lib/list/VList.ts#L183">packages/roosterjs-editor-dom/lib/list/VList.ts:183</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -512,6 +686,15 @@
 									After that, this VList becomes unavailable because we set this.rootList to null</p>
 								</div>
 							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> shouldReuseAllAncestorListElements: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional - defaults to false.</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -531,6 +714,18 @@
 						<a href="../modules/roosterjs_color_utils.html">roosterjs-<wbr>color-<wbr>utils</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model.html">roosterjs-<wbr>content-<wbr>model</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_dom.html">roosterjs-<wbr>content-<wbr>model-<wbr>dom</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_editor.html">roosterjs-<wbr>content-<wbr>model-<wbr>editor</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_types.html">roosterjs-<wbr>content-<wbr>model-<wbr>types</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_editor_api.html">roosterjs-<wbr>editor-<wbr>api</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -544,6 +739,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_editor_types.html">roosterjs-<wbr>editor-<wbr>types</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_editor_types_compatible.html">roosterjs-<wbr>editor-<wbr>types-<wbr>compatible</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_react.html">roosterjs-<wbr>react</a>
@@ -563,6 +761,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="roosterjs_editor_dom.vlist.html#items" class="tsd-kind-icon">items</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="roosterjs_editor_dom.vlist.html#rootlist" class="tsd-kind-icon">root<wbr>List</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="roosterjs_editor_dom.vlist.html#appenditem" class="tsd-kind-icon">append<wbr>Item</a>
 							</li>
@@ -576,10 +777,22 @@
 								<a href="roosterjs_editor_dom.vlist.html#getlastitemnumber" class="tsd-kind-icon">get<wbr>Last<wbr>Item<wbr>Number</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="roosterjs_editor_dom.vlist.html#getlistitemindex" class="tsd-kind-icon">get<wbr>List<wbr>Item<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="roosterjs_editor_dom.vlist.html#getstart" class="tsd-kind-icon">get<wbr>Start</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="roosterjs_editor_dom.vlist.html#mergevlist" class="tsd-kind-icon">mergeVList</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="roosterjs_editor_dom.vlist.html#setalignment" class="tsd-kind-icon">set<wbr>Alignment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="roosterjs_editor_dom.vlist.html#setindentation" class="tsd-kind-icon">set<wbr>Indentation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="roosterjs_editor_dom.vlist.html#setliststyletype" class="tsd-kind-icon">set<wbr>List<wbr>Style<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="roosterjs_editor_dom.vlist.html#split" class="tsd-kind-icon">split</a>
