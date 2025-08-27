@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EnterShadowEditEvent | RoosterJs API Reference</title>
+	<title>MarkdownToModelOptions | RoosterJs API Reference</title>
 	<meta name="description" content="Documentation for RoosterJs API Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -53,13 +53,13 @@
 					<a href="../modules.html">RoosterJs API Reference</a>
 				</li>
 				<li>
-					<a href="../modules/roosterjs_content_model_types.html">roosterjs-content-model-types</a>
+					<a href="../modules/roosterjs_content_model_markdown.html">roosterjs-content-model-markdown</a>
 				</li>
 				<li>
-					<a href="roosterjs_content_model_types.entershadoweditevent.html">EnterShadowEditEvent</a>
+					<a href="roosterjs_content_model_markdown.markdowntomodeloptions.html">MarkdownToModelOptions</a>
 				</li>
 			</ul>
-			<h1>Interface EnterShadowEditEvent</h1>
+			<h1>Interface MarkdownToModelOptions</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>A plugin triggered right after editor has entered Shadow Edit mode</p>
+						<p>Options for processing markdown text.</p>
 					</div>
 				</div>
 			</section>
@@ -77,12 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="roosterjs_content_model_types.basepluginevent.html" class="tsd-signature-type" data-tsd-kind="Interface">BasePluginEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;enteredShadowEdit&quot;</span><span class="tsd-signature-symbol">&gt;</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">EnterShadowEditEvent</span>
-							</li>
-						</ul>
+						<span class="target">MarkdownToModelOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -90,57 +85,55 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="roosterjs_content_model_types.entershadoweditevent.html#eventdatacache" class="tsd-kind-icon">event<wbr>Data<wbr>Cache</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="roosterjs_content_model_types.entershadoweditevent.html#eventtype" class="tsd-kind-icon">event<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_markdown.markdowntomodeloptions.html#emptyline" class="tsd-kind-icon">empty<wbr>Line</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_markdown.markdowntomodeloptions.html#splitlinespattern" class="tsd-kind-icon">split<wbr>Lines<wbr>Pattern</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="eventdatacache" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> event<wbr>Data<wbr>Cache</h3>
-					<div class="tsd-signature tsd-kind-icon">event<wbr>Data<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="emptyline" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> empty<wbr>Line</h3>
+					<div class="tsd-signature tsd-kind-icon">empty<wbr>Line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;preserve&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;remove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;merge&quot;</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="roosterjs_content_model_types.basepluginevent.html">BasePluginEvent</a>.<a href="roosterjs_content_model_types.basepluginevent.html#eventdatacache">eventDataCache</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/62dafa5/packages/roosterjs-content-model-types/lib/event/BasePluginEvent.ts#L17">roosterjs-content-model-types/lib/event/BasePluginEvent.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/62dafa5/packages/roosterjs-content-model-markdown/lib/markdownToModel/types/MarkdownToModelOptions.ts#L17">roosterjs-content-model-markdown/lib/markdownToModel/types/MarkdownToModelOptions.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>An optional event cache.
-								This will be consumed by event cache API to store some expensive calculation result.
-							So that for the same event across plugins, the result doesn&#39;t need to be calculated again</p>
+							<p>Specify how should we process empty lines in the markdown text.</p>
+							<ul>
+								<li>&#39;preserve&#39;: Keep empty lines as they are.</li>
+								<li>&#39;remove&#39;: Remove empty lines.</li>
+								<li>&#39;merge&#39;: Merge empty lines with adjacent paragraphs.</li>
+							</ul>
 						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
-							</li>
-						</ul>
+						<dl class="tsd-comment-tags">
+							<dt>default</dt>
+							<dd><p>&#39;merge&#39;</p>
+							</dd>
+						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="eventtype" class="tsd-anchor"></a>
-					<h3>event<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">event<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;enteredShadowEdit&quot;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="splitlinespattern" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> split<wbr>Lines<wbr>Pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">split<wbr>Lines<wbr>Pattern<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="roosterjs_content_model_types.basepluginevent.html">BasePluginEvent</a>.<a href="roosterjs_content_model_types.basepluginevent.html#eventtype">eventType</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/62dafa5/packages/roosterjs-content-model-types/lib/event/BasePluginEvent.ts#L10">roosterjs-content-model-types/lib/event/BasePluginEvent.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/62dafa5/packages/roosterjs-content-model-markdown/lib/markdownToModel/types/MarkdownToModelOptions.ts#L8">roosterjs-content-model-markdown/lib/markdownToModel/types/MarkdownToModelOptions.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Type of this event</p>
+							<p>The pattern to split lines in the markdown text.</p>
 						</div>
 					</div>
 				</section>
@@ -167,13 +160,13 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_content_model_dom.html">roosterjs-<wbr>content-<wbr>model-<wbr>dom</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/roosterjs_content_model_markdown.html">roosterjs-<wbr>content-<wbr>model-<wbr>markdown</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_content_model_plugins.html">roosterjs-<wbr>content-<wbr>model-<wbr>plugins</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_content_model_types.html">roosterjs-<wbr>content-<wbr>model-<wbr>types</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -186,21 +179,30 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="roosterjs_content_model_markdown.markdownlinebreaks.html" class="tsd-kind-icon">Markdown<wbr>Line<wbr>Breaks</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="roosterjs_content_model_types.entershadoweditevent.html" class="tsd-kind-icon">Enter<wbr>Shadow<wbr>Edit<wbr>Event</a>
+						<a href="roosterjs_content_model_markdown.markdowntomodeloptions.html" class="tsd-kind-icon">Markdown<wbr>ToModel<wbr>Options</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="roosterjs_content_model_types.entershadoweditevent.html#eventdatacache" class="tsd-kind-icon">event<wbr>Data<wbr>Cache</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_markdown.markdowntomodeloptions.html#emptyline" class="tsd-kind-icon">empty<wbr>Line</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="roosterjs_content_model_types.entershadoweditevent.html#eventtype" class="tsd-kind-icon">event<wbr>Type</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_markdown.markdowntomodeloptions.html#splitlinespattern" class="tsd-kind-icon">split<wbr>Lines<wbr>Pattern</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/roosterjs_content_model_markdown.html#convertcontentmodeltomarkdown" class="tsd-kind-icon">convert<wbr>Content<wbr>Model<wbr>ToMarkdown</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/roosterjs_content_model_markdown.html#convertmarkdowntocontentmodel" class="tsd-kind-icon">convert<wbr>Markdown<wbr>ToContent<wbr>Model</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -220,6 +222,7 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
