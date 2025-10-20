@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for roosterjs-content-model-dom/lib/formatHandlers/segment/undeletableLinkFormatHandler.ts</title>
+    <title>Code coverage report for roosterjs-content-model-plugins/lib/edit/utils/preserveParagraphFormat.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">roosterjs-content-model-dom/lib/formatHandlers/segment</a> undeletableLinkFormatHandler.ts</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">roosterjs-content-model-plugins/lib/edit/utils</a> preserveParagraphFormat.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -81,54 +81,60 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">49x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">43x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { isElementOfType } from '../../domUtils/isElementOfType';
-import {
-    isLinkUndeletable,
-    setLinkUndeletable,
-} from '../../domUtils/hiddenProperties/undeletableLink';
-import type { UndeletableFormat } from 'roosterjs-content-model-types';
-import type { FormatHandler } from '../FormatHandler';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { ShallowMutableContentModelParagraph } from 'roosterjs-content-model-types';
 &nbsp;
 /**
  * @internal
+ * Preserve specific paragraph format properties from source paragraph to target paragraph
+ * @param formatsToPreserveOnMerge Array of format property names to preserve
+ * @param paragraph Source paragraph to copy format from
+ * @param newParagraph Target paragraph to copy format to
  */
-export const undeletableLinkFormatHandler: FormatHandler&lt;UndeletableFormat&gt; = {
-    parse: (format, element) =&gt; {
-        if (isElementOfType(element, 'a') &amp;&amp; isLinkUndeletable(element)) {
-            format.undeletable = true;
-        }
-    },
+export function preserveParagraphFormat(
+    formatsToPreserveOnMerge: string[] | undefined,
+    paragraph: ShallowMutableContentModelParagraph,
+    newParagraph: ShallowMutableContentModelParagraph
+) {
+    if (formatsToPreserveOnMerge &amp;&amp; formatsToPreserveOnMerge.length) {
+        const format = paragraph.format as { [key: string]: string };
+        const newFormat = newParagraph.format as { [key: string]: string };
+        formatsToPreserveOnMerge.forEach(key =&gt; {
+            const formatValue = format[key];
 &nbsp;
-    apply: (format, element) =&gt; {
-        if (format.undeletable &amp;&amp; isElementOfType(element, 'a')) {
-            setLinkUndeletable(element, true);
-        }
-    },
-};
+            if (formatValue !== undefined) {
+                newFormat[key] = formatValue;
+            }
+        });
+    }
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
