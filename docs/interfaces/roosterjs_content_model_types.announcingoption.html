@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BeforeKeyboardEditingEvent | RoosterJs API Reference</title>
+	<title>AnnouncingOption | RoosterJs API Reference</title>
 	<meta name="description" content="Documentation for RoosterJs API Reference">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../modules/roosterjs_content_model_types.html">roosterjs-content-model-types</a>
 				</li>
 				<li>
-					<a href="roosterjs_content_model_types.beforekeyboardeditingevent.html">BeforeKeyboardEditingEvent</a>
+					<a href="roosterjs_content_model_types.announcingoption.html">AnnouncingOption</a>
 				</li>
 			</ul>
-			<h1>Interface BeforeKeyboardEditingEvent</h1>
+			<h1>Interface AnnouncingOption</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Provides a chance for plugin to change the content before it is copied from editor.</p>
+						<p>Options for announcing format changes</p>
 					</div>
 				</div>
 			</section>
@@ -77,12 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="roosterjs_content_model_types.baseplugindomevent.html" class="tsd-signature-type" data-tsd-kind="Interface">BasePluginDomEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;beforeKeyboardEditing&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">KeyboardEvent</span><span class="tsd-signature-symbol">&gt;</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">BeforeKeyboardEditingEvent</span>
-							</li>
-						</ul>
+						<span class="target">AnnouncingOption</span>
 					</li>
 				</ul>
 			</section>
@@ -90,74 +85,29 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-inherited">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="roosterjs_content_model_types.beforekeyboardeditingevent.html#eventdatacache" class="tsd-kind-icon">event<wbr>Data<wbr>Cache</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="roosterjs_content_model_types.beforekeyboardeditingevent.html#eventtype" class="tsd-kind-icon">event<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="roosterjs_content_model_types.beforekeyboardeditingevent.html#rawevent" class="tsd-kind-icon">raw<wbr>Event</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="roosterjs_content_model_types.announcingoption.html#announceformatchange" class="tsd-kind-icon">announce<wbr>Format<wbr>Change</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="eventdatacache" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> event<wbr>Data<wbr>Cache</h3>
-					<div class="tsd-signature tsd-kind-icon">event<wbr>Data<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="announceformatchange" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> announce<wbr>Format<wbr>Change</h3>
+					<div class="tsd-signature tsd-kind-icon">announce<wbr>Format<wbr>Change<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="roosterjs_content_model_types.baseplugindomevent.html">BasePluginDomEvent</a>.<a href="roosterjs_content_model_types.baseplugindomevent.html#eventdatacache">eventDataCache</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/8f11c65/packages/roosterjs-content-model-types/lib/event/BasePluginEvent.ts#L17">roosterjs-content-model-types/lib/event/BasePluginEvent.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/8f11c65/packages/roosterjs-content-model-types/lib/parameter/AnnouncingOption.ts#L8">roosterjs-content-model-types/lib/parameter/AnnouncingOption.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>An optional event cache.
-								This will be consumed by event cache API to store some expensive calculation result.
-							So that for the same event across plugins, the result doesn&#39;t need to be calculated again</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-index-signature">
-								<h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="eventtype" class="tsd-anchor"></a>
-					<h3>event<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">event<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;beforeKeyboardEditing&quot;</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="roosterjs_content_model_types.baseplugindomevent.html">BasePluginDomEvent</a>.<a href="roosterjs_content_model_types.baseplugindomevent.html#eventtype">eventType</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/8f11c65/packages/roosterjs-content-model-types/lib/event/BasePluginEvent.ts#L10">roosterjs-content-model-types/lib/event/BasePluginEvent.ts:10</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Type of this event</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="rawevent" class="tsd-anchor"></a>
-					<h3>raw<wbr>Event</h3>
-					<div class="tsd-signature tsd-kind-icon">raw<wbr>Event<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">KeyboardEvent</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="roosterjs_content_model_types.baseplugindomevent.html">BasePluginDomEvent</a>.<a href="roosterjs_content_model_types.baseplugindomevent.html#rawevent">rawEvent</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/ConnectionMaster/roosterjs/blob/8f11c65/packages/roosterjs-content-model-types/lib/event/BasePluginEvent.ts#L30">roosterjs-content-model-types/lib/event/BasePluginEvent.ts:30</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Raw DOM event</p>
+							<p>Whether to announce the format change</p>
 						</div>
 					</div>
 				</section>
@@ -206,16 +156,10 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="roosterjs_content_model_types.beforekeyboardeditingevent.html" class="tsd-kind-icon">Before<wbr>Keyboard<wbr>Editing<wbr>Event</a>
+						<a href="roosterjs_content_model_types.announcingoption.html" class="tsd-kind-icon">Announcing<wbr>Option</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="roosterjs_content_model_types.beforekeyboardeditingevent.html#eventdatacache" class="tsd-kind-icon">event<wbr>Data<wbr>Cache</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="roosterjs_content_model_types.beforekeyboardeditingevent.html#eventtype" class="tsd-kind-icon">event<wbr>Type</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="roosterjs_content_model_types.beforekeyboardeditingevent.html#rawevent" class="tsd-kind-icon">raw<wbr>Event</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="roosterjs_content_model_types.announcingoption.html#announceformatchange" class="tsd-kind-icon">announce<wbr>Format<wbr>Change</a>
 							</li>
 						</ul>
 					</li>
@@ -240,6 +184,7 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
